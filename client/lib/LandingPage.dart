@@ -14,7 +14,7 @@ class _LandingpageState extends State<Landingpage> {
         fit: StackFit.expand,
         children: [
           Container(
-            child: Image.asset("images/landing_page_bg.png", fit: BoxFit.cover,),
+            child: Image.asset("assets/images/landing_page_bg.png", fit: BoxFit.cover,),
           ),
           Container(
             alignment: Alignment.bottomCenter,

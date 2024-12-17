@@ -1,3 +1,5 @@
+import 'package:client/EditProfile.dart';
+import 'package:client/ProfilePage.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {  @override
@@ -15,14 +17,21 @@ class _HomepageState extends State<Homepage> {
           Container(
             padding: EdgeInsets.all(15),
             width: MediaQuery.of(context).size.width,
-            color: Colors.black,
+            color: Color.fromRGBO(24, 28, 20, 1),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Chit-Chat", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
-                    Icon(Icons.menu, color: Colors.white, size: 30,)
+                    InkWell(
+                        child: Icon(Icons.account_circle, color: Colors.white, size: 30,),
+                      onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (builder) {
+                            return Profilepage();
+                          }));
+                      },
+                    )
                   ],
                 ),
                 Container(
@@ -59,3 +68,4 @@ class _HomepageState extends State<Homepage> {
     // TODO: implement build
     throw UnimplementedError();
   }}
+

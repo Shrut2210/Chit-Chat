@@ -1,6 +1,8 @@
 import 'package:client/main.dart';
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
+import 'package:localstorage/localstorage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Future<String> sign_up({required String name,required String email,required String password}) async {
   print("loading...");
@@ -28,6 +30,7 @@ Future<String> sign_up({required String name,required String email,required Stri
 
 Future<String> log_in({required String email,required String password}) async {
   print("loading...");
+  final SharedPreferences pref = await SharedPreferences.getInstance();
   try {
     var bytes = utf8.encode(password);
     var hashedPassword = sha256.convert(bytes).toString();
@@ -38,6 +41,7 @@ Future<String> log_in({required String email,required String password}) async {
         .eq('password', hashedPassword);
 
     if (response != null && response.isNotEmpty) {
+      pref.setString('email', email);
       return "User Logged In";
     } else {
       final emailCheck = await supabase.from('Admin').select('*').eq('email', email);

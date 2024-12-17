@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.6
   supabase_flutter: ^2.8.1
   flutter_dotenv: ^5.2.1
+  localstorage: ^5.0.0
+  shared_preferences: any
+  image_picker: any
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +67,9 @@ flutter:
   assets:
     - assets/images/login_bg_1.jpeg
     - assets/images/login_bg_2.jpeg
+    - assets/images/landing_page_bg.png
+    - assets/images/login_signup_bg.png
+    - assets/images/account_logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

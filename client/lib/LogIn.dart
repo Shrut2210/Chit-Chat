@@ -18,7 +18,7 @@ class _LogInState extends State<LogIn> {
         fit: StackFit.expand,
         children: [
           Container(
-            child: Image.asset("images/login_signup_bg.png", fit: BoxFit.cover,),
+            child: Image.asset("assets/images/login_signup_bg.png", fit: BoxFit.cover,),
           ),
           Center(
             child : Container(

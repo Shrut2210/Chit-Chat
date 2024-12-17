@@ -21,7 +21,7 @@ class _LogInState extends State<Signup> {
         fit: StackFit.expand,
         children: [
           Container(
-            child: Image.asset("images/login_signup_bg.png", fit: BoxFit.cover,),
+            child: Image.asset("assets/images/login_signup_bg.png", fit: BoxFit.cover,),
           ),
           Center(
               child : Container(
@@ -92,7 +92,7 @@ class _LogInState extends State<Signup> {
                           actions: [
                             TextButton(
                               onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (builder) {
-                                return Editprofile();
+                                return LogIn();
                               })),
                               child: Text("Ok", style: TextStyle(color: Colors.blue, fontSize: 20, fontWeight: FontWeight.bold),),
                             ),
